@@ -1,0 +1,41 @@
+import 'package:flutter/material.dart';
+
+class AppColor {
+  static const Color black = Color(0xFF000000);
+  static const Color white = Color(0xFFFFFFFF);
+  static const Color transparent = Color(0x00000000);
+  static const Color blue = Color(0xFF0492C2);
+  static const Color light = Color(0xffF4F4F4);
+  static const Color dark = Color(0xFF2f3338);
+  static const Color blueDark = Color(0xFF23395d);
+  static const Color red = Color(0xFFD13438);
+  static const Color redDark = Color(0xFF982626);
+  static const Color cardDark = Color(0xFF3B3E43);
+  static const Color cardLight = white;
+  static const Color backgroundLight = white;
+  static const Color backgroundDark = Color(0xFF1a1c1e);
+  static const Color dividerLight = Color(0xFF919191);
+  static const Color dividerDark = Color(0xFF6E6E6E);
+  static const Color grayCircle = Color(0xFF919191);
+  static const Color redCircle = Color(0xFFD50000);
+  static const Color greenCircle = Color(0xFF00C853);
+  static const Color borderLine = Color(0xFFE5E5EA);
+  static const Color red700 = Color(0xFFD32F2F);
+  static const Color gray25 = Color(0xFFF8F8F8);
+  static const Color gray50 = Color(0xFFF1F1F1);
+  static const Color gray75 = Color(0xFFECECEC);
+  static const Color gray100 = Color(0xFFE1E1E1);
+  static const Color gray200 = Color(0xFFEEEEEE);
+  static const Color gray300 = Color(0xFFACACAC);
+  static const Color gray400 = Color(0xFF919191);
+  static const Color gray500 = Color(0xFF6E6E6E);
+  static const Color gray600 = Color(0xFF535353);
+  static const Color gray700 = Color(0xFF616161);
+  static const Color gray800 = Color(0xFF292929);
+  static const Color gray900 = Color(0xFF212121);
+  static const Color gray950 = Color(0xFF141414);
+  static const Color selectedBottomItemColor = red;
+  static const Color unselectedBottomItemColor = gray500;
+  static const Color navigationBackIconDark = white;
+  static const Color navigationBackIconLight = black;
+}
