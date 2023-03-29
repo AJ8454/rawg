@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:rawg/src/core/utils/app_strings.dart';
 
 class AppResponsive {
-  static const kBorderRadius = 8.0;
+  static const kBorderRadius = 12.0;
   static const kdefaultPadding = 12.0;
   static double height(BuildContext context) {
     double? size = MediaQuery.of(context).size.height;
@@ -59,12 +60,12 @@ class AppResponsive {
     TextOverflow? ovrflow = TextOverflow.ellipsis,
   }) =>
       TextStyle(
-        color: tColor ?? Theme.of(context).primaryColor,
-        letterSpacing: letterSpacing ?? 0.4,
+        color: tColor ?? Theme.of(context).primaryColorDark,
+        letterSpacing: letterSpacing,
         fontSize:
             fsize != null ? fontSize(context) * fsize : kmediumFont(context),
         //  overflow: overf ?? ovrflow,
-        fontFamily: fontFamily ?? "poppins",
+        fontFamily: fontFamily ?? AppStrings.rubiesqueFont,
         fontWeight: fweight,
       );
 }

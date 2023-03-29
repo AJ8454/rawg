@@ -56,18 +56,17 @@ class _DropDownWidgetState extends State<CustomDropDownWidget> {
       ),
       child: DropdownButtonHideUnderline(
         child: Theme(
-          data: Theme.of(context).copyWith(
-            canvasColor: Theme.of(context).scaffoldBackgroundColor,
-          ),
+          data: Theme.of(context)
+              .copyWith(canvasColor: Theme.of(context).scaffoldBackgroundColor),
           child: DropdownButton(
             iconSize: 25,
-            icon: const Icon(
-              Icons.keyboard_arrow_down_outlined,
-            ),
+            borderRadius: BorderRadius.circular(AppResponsive.kBorderRadius),
+            icon: const Icon(Icons.keyboard_arrow_down_outlined),
             iconEnabledColor: Theme.of(context).primaryColor,
             iconDisabledColor: Theme.of(context).primaryColor,
             isExpanded: true,
-            style: AppResponsive.responsiveTextStyle(context),
+            style: AppResponsive.responsiveTextStyle(context,
+                tColor: Theme.of(context).primaryColorDark),
             hint: Text(
               widget.hintText!,
               style: AppResponsive.responsiveTextStyle(context),

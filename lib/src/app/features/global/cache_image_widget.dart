@@ -35,6 +35,7 @@ class CacheImageWidget extends StatelessWidget {
             cache: true,
             clearMemoryCacheWhenDispose: true,
             retries: 5,
+
             //cancelToken: cancellationToken,
           );
   }

@@ -59,9 +59,11 @@ class _LoginPageState extends State<LoginPage> {
                           style: AppResponsive.responsiveTextStyle(
                             context,
                             fsize:
-                                AppResponsive.kmaxExtraLargeFont(context) + 15,
+                                AppResponsive.kmaxExtraLargeFont(context) + 25,
                             fweight: FontWeight.bold,
-                            tColor: AppColor.blue,
+                            tColor: AppColor.redDark,
+                            fontFamily: AppStrings.rexotickFont,
+                            letterSpacing: 3,
                           ),
                         ),
                       ),
@@ -72,7 +74,7 @@ class _LoginPageState extends State<LoginPage> {
                           context,
                           fsize: AppResponsive.kmaxExtraLargeFont(context) + 10,
                           fweight: FontWeight.bold,
-                          tColor: AppColor.blue,
+                          tColor: AppColor.redDark,
                         ),
                       ),
                       const SizedBox(height: 20),

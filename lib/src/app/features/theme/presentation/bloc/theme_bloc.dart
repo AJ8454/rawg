@@ -31,7 +31,7 @@ class ThemeBloc extends Bloc<ThemeEvent, ThemeState> {
 
 Future<bool> isDark() async {
   final SharedPreferences prefs = await SharedPreferences.getInstance();
-  return prefs.getBool(themeStatusKey) ?? false;
+  return prefs.getBool(themeStatusKey) ?? true;
 }
 
 Future<void> setTheme(bool isDark) async {

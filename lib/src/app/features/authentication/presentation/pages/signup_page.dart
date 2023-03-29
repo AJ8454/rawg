@@ -47,14 +47,14 @@ class _SignUpPageState extends State<SignUpPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: AppResponsive.height(context) * 0.15),
+                      SizedBox(height: AppResponsive.height(context) * 0.07),
                       Text(
                         "Sign Up",
                         style: AppResponsive.responsiveTextStyle(
                           context,
                           fsize: AppResponsive.kmaxExtraLargeFont(context) + 10,
                           fweight: FontWeight.bold,
-                          tColor: AppColor.blue,
+                          tColor: AppColor.redDark,
                         ),
                       ),
                       const SizedBox(height: 20),
@@ -169,6 +169,15 @@ class _SignUpPageState extends State<SignUpPage> {
                                   .add(SignUpEvent(userEntity));
                             }
                           },
+                        ),
+                      ),
+                      Align(
+                        alignment: Alignment.center,
+                        child: TextButton(
+                          onPressed: () {
+                            AppNavigator.pop(context);
+                          },
+                          child: const Text("Already have an account?  Login"),
                         ),
                       ),
                       const SizedBox(height: 20),

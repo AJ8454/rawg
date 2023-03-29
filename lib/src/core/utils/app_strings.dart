@@ -1,8 +1,13 @@
 class AppStrings {
-  static const String appName = "Architech Todo App";
+  static const String apiKey = "be0766b927464872b2bbea66b7c8c3f4";
+
+  static const String appName = "Raw Games";
+  static const String rubiesqueFont = "rubiesque";
+  static const String rexotickFont = "rexotick";
 
   static const String cacheUserKey = "cacheUserKey";
   static const cacheUserLoggedKey = "CACHED_USERLOGGED";
+  static const cacheGenresKey = "CACHED_GENRES";
 
   static const String todoDataBase = "todo.db";
   static const String authTable = "authentication";

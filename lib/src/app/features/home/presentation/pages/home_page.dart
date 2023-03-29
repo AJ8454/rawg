@@ -1,10 +1,11 @@
-import 'package:rawg/src/app/features/global/snackbar_message.dart';
-import 'package:rawg/src/app/features/home/presentation/bloc/home_bloc.dart';
-import 'package:rawg/src/app/features/splash/presentation/pages/splash_page.dart';
+import 'package:rawg/src/app/features/home/presentation/genres_bloc/genres_bloc.dart';
 
-import 'package:rawg/src/core/routes/app_navigator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:rawg/src/app/features/home/presentation/widgets/home_genres_widget.dart';
+import 'package:rawg/src/core/responsive/app_responsive.dart';
+import 'package:rawg/src/core/utils/app_colors.dart';
+import 'package:rawg/src/core/utils/app_strings.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -17,34 +18,49 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   void initState() {
-    BlocProvider.of<HomeBloc>(context).add(GetLoggedUserDataEvent());
+    BlocProvider.of<GenresBloc>(context).add(GetGameCategoriesEvent());
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: BlocConsumer<HomeBloc, HomeState>(
-      builder: (context, state) {
-        if (state is HomeLoadingState) {
-          return const Center(child: CircularProgressIndicator());
-        }
-        if (state is HomeLoadedState) {
-          return Column(
-            children: const [],
-          );
-        }
-        return const SizedBox();
-      },
-      listener: (context, state) {
-        if (state is HomeFailureState) {
-          SnackBarMessage()
-              .showErrorSnackBar(message: state.error, context: context);
-        }
-        if (state is UserLoggetOutState) {
-          AppNavigator.pushReplace(context, SplashPage.route);
-        }
-      },
-    ));
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.search,
+            size: AppResponsive.kmaxExtraLargeFont(context) + 8,
+          ),
+        ),
+        title: Text(
+          AppStrings.appName,
+          style: AppResponsive.responsiveTextStyle(
+            context,
+            fsize: AppResponsive.kmaxExtraLargeFont(context) + 8,
+            fweight: FontWeight.bold,
+            tColor: AppColor.redDark,
+            letterSpacing: 2,
+            fontFamily: AppStrings.rexotickFont,
+          ),
+        ),
+        centerTitle: true,
+        actions: const [
+          CircleAvatar(
+            backgroundColor: AppColor.redDark,
+            child: Icon(Icons.person),
+          ),
+        ],
+      ),
+      body: ListView(
+        children: [
+          const HomeGenresWidget(),
+          Container(
+            height: 100,
+          )
+        ],
+      ),
+    );
   }
 }

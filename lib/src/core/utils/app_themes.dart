@@ -5,17 +5,17 @@ import 'package:rawg/src/core/utils/app_colors.dart';
 class AppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
-      primaryColor: AppColor.dark,
+      primaryColor: AppColor.redDark,
       primaryColorLight: AppColor.light,
       primaryColorDark: AppColor.dark,
       appBarTheme: const AppBarTheme(
         elevation: 2,
         iconTheme: IconThemeData(color: AppColor.white),
-        backgroundColor: AppColor.blue,
+        backgroundColor: AppColor.redDark,
         titleTextStyle: TextStyle(
           color: AppColor.white,
           fontSize: 16,
-          fontFamily: 'poppins',
+          fontFamily: 'rubiesque',
           fontWeight: FontWeight.w600,
         ),
         // systemOverlayStyle: SystemUiOverlayStyle.dark.copyWith(
@@ -33,7 +33,7 @@ class AppTheme {
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         backgroundColor: AppColor.white,
         elevation: 8,
-        selectedItemColor: AppColor.blue,
+        selectedItemColor: AppColor.redDark,
         unselectedItemColor: AppColor.black,
         type: BottomNavigationBarType.fixed,
         selectedLabelStyle:
@@ -44,10 +44,10 @@ class AppTheme {
       dividerColor: AppColor.dividerLight,
       splashColor: AppColor.transparent,
       iconTheme: const IconThemeData(color: AppColor.black),
-      fontFamily: 'poppins',
+      fontFamily: 'rubiesque',
       textTheme: ThemeData.light().textTheme,
       progressIndicatorTheme:
-          const ProgressIndicatorThemeData(color: AppColor.blue),
+          const ProgressIndicatorThemeData(color: AppColor.redDark),
       buttonTheme: ButtonThemeData(
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(AppResponsive.kBorderRadius)),
@@ -55,19 +55,19 @@ class AppTheme {
       ),
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
-          foregroundColor: AppColor.blue,
+          foregroundColor: AppColor.redDark,
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: AppColor.blue,
+          backgroundColor: AppColor.redDark,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(AppResponsive.kBorderRadius)),
         ),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
-          foregroundColor: AppColor.blue,
+          foregroundColor: AppColor.redDark,
           backgroundColor: AppColor.backgroundLight,
           shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(
@@ -95,14 +95,14 @@ class AppTheme {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(AppResponsive.kBorderRadius),
-          borderSide: const BorderSide(color: AppColor.blue, width: 1.5),
+          borderSide: const BorderSide(color: AppColor.redDark, width: 1.5),
         ),
       ),
       checkboxTheme: CheckboxThemeData(
         fillColor: MaterialStateColor.resolveWith(
           (states) {
             if (states.contains(MaterialState.selected)) {
-              return AppColor.blue; // the color when checkbox is selected;
+              return AppColor.redDark; // the color when checkbox is selected;
             }
             return Colors.grey; //the color when checkbox is unselected;
           },
@@ -113,26 +113,26 @@ class AppTheme {
 
   static ThemeData get darkTheme {
     return ThemeData(
-      primaryColor: AppColor.light,
-      primaryColorLight: AppColor.dark,
-      primaryColorDark: AppColor.dark,
+      primaryColor: AppColor.redDark,
+      primaryColorLight: AppColor.gray300,
+      primaryColorDark: AppColor.white,
       appBarTheme: const AppBarTheme(
         elevation: 2,
         iconTheme: IconThemeData(color: AppColor.white),
-        backgroundColor: AppColor.blue,
+        backgroundColor: AppColor.redDark,
         titleTextStyle: TextStyle(
             color: AppColor.white,
             fontSize: 16,
-            fontFamily: 'poppins',
+            fontFamily: 'rubiesque',
             fontWeight: FontWeight.w600),
         // systemOverlayStyle: SystemUiOverlayStyle(
-        //   systemNavigationBarColor: AppColor.blue,
-        //   statusBarColor: AppColor.blue,
+        //   systemNavigationBarColor: AppColor.redDark,
+        //   statusBarColor: AppColor.redDark,
         //   statusBarBrightness: Brightness.dark,
         //   statusBarIconBrightness: Brightness.light,
         // ),
       ),
-      scaffoldBackgroundColor: AppColor.backgroundDark,
+      scaffoldBackgroundColor: AppColor.black,
       cardColor: AppColor.cardDark,
       cardTheme: CardTheme(
         shape: RoundedRectangleBorder(
@@ -143,7 +143,7 @@ class AppTheme {
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         backgroundColor: AppColor.dark,
         elevation: 10,
-        selectedItemColor: AppColor.blue,
+        selectedItemColor: AppColor.redDark,
         unselectedItemColor: AppColor.white,
         type: BottomNavigationBarType.fixed,
         selectedLabelStyle:
@@ -154,10 +154,10 @@ class AppTheme {
       dividerColor: AppColor.dividerDark,
       splashColor: AppColor.transparent,
       iconTheme: const IconThemeData(color: AppColor.white),
-      fontFamily: 'monseterrat',
+      fontFamily: 'rubiesque',
       textTheme: ThemeData.dark().textTheme,
       progressIndicatorTheme:
-          const ProgressIndicatorThemeData(color: AppColor.blue),
+          const ProgressIndicatorThemeData(color: AppColor.redDark),
       buttonTheme: ButtonThemeData(
         shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
@@ -165,19 +165,19 @@ class AppTheme {
       ),
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
-          foregroundColor: AppColor.blue,
+          foregroundColor: AppColor.redDark,
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: AppColor.blue,
+          backgroundColor: AppColor.redDark,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
         ),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
-          foregroundColor: AppColor.blue,
+          foregroundColor: AppColor.redDark,
           backgroundColor: AppColor.backgroundDark,
           shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(
@@ -188,9 +188,9 @@ class AppTheme {
       inputDecorationTheme: InputDecorationTheme(
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         contentPadding: const EdgeInsets.only(left: 10, top: 20),
-        labelStyle: const TextStyle(color: Colors.grey),
-        hintStyle: const TextStyle(color: Colors.grey),
-        prefixIconColor: Colors.white,
+        labelStyle: const TextStyle(color: AppColor.gray300),
+        hintStyle: const TextStyle(color: AppColor.gray300),
+        prefixIconColor: AppColor.redDark,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(AppResponsive.kBorderRadius),
         ),
@@ -200,18 +200,18 @@ class AppTheme {
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(AppResponsive.kBorderRadius),
-          borderSide: const BorderSide(color: AppColor.white, width: 1.5),
+          borderSide: const BorderSide(color: AppColor.redDark, width: 1.5),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(AppResponsive.kBorderRadius),
-          borderSide: const BorderSide(color: AppColor.blue, width: 1.5),
+          borderSide: const BorderSide(color: AppColor.redDark, width: 1.5),
         ),
       ),
       checkboxTheme: CheckboxThemeData(
         fillColor: MaterialStateColor.resolveWith(
           (states) {
             if (states.contains(MaterialState.selected)) {
-              return AppColor.blue; // the color when checkbox is selected;
+              return AppColor.redDark; // the color when checkbox is selected;
             }
             return Colors.grey; //the color when checkbox is unselected;
           },

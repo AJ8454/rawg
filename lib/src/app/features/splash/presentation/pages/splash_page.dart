@@ -45,9 +45,11 @@ class _SplashPageState extends State<SplashPage> {
             AppStrings.appName,
             style: AppResponsive.responsiveTextStyle(
               context,
-              fsize: AppResponsive.kmaxExtraLargeFont(context) + 10,
+              fsize: AppResponsive.kmaxExtraLargeFont(context) + 40,
               fweight: FontWeight.bold,
-              tColor: AppColor.blue,
+              tColor: AppColor.redDark,
+              fontFamily: AppStrings.rexotickFont,
+              letterSpacing: 2,
             ),
           ),
         ),

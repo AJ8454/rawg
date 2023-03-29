@@ -57,7 +57,7 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
                         context,
                         fsize: AppResponsive.kmaxExtraLargeFont(context) + 10,
                         fweight: FontWeight.bold,
-                        tColor: AppColor.blue,
+                        tColor: AppColor.redDark,
                       ),
                     ),
                     const SizedBox(height: 20),
@@ -110,15 +110,6 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
                           }
                         },
                         child: const Text("Changed Password"),
-                      ),
-                    ),
-                    Align(
-                      alignment: Alignment.center,
-                      child: TextButton(
-                        onPressed: () {
-                          AppNavigator.pop(context);
-                        },
-                        child: const Text("Already have an account?  Login"),
                       ),
                     ),
                     const SizedBox(height: 20),
