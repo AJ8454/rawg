@@ -1,13 +1,16 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:rawg/src/app/features/geners/presentation/bloc/genres_bloc.dart';
+import 'package:rawg/src/app/features/geners/presentation/pages/genres_category_page.dart';
 import 'package:rawg/src/app/features/global/cache_image_widget.dart';
-import 'package:rawg/src/app/features/home/presentation/genres_bloc/genres_bloc.dart';
+import 'package:rawg/src/app/features/geners/presentation/pages/genres_page.dart';
 import 'package:rawg/src/core/responsive/app_responsive.dart';
+import 'package:rawg/src/core/routes/app_navigator.dart';
 import 'package:rawg/src/core/utils/app_colors.dart';
 
-class HomeGenresWidget extends StatelessWidget {
-  const HomeGenresWidget({super.key});
+class GenresSliderWidget extends StatelessWidget {
+  const GenresSliderWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +49,10 @@ class HomeGenresWidget extends StatelessWidget {
                         ),
                       ),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          AppNavigator.pushWithData(context, GenersPage.route,
+                              state.genresModel.results);
+                        },
                         icon: const Icon(
                           Icons.arrow_forward_ios_rounded,
                           color: AppColor.redDark,
@@ -62,8 +68,42 @@ class HomeGenresWidget extends StatelessWidget {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(
                                 AppResponsive.kBorderRadius),
-                            child: CacheImageWidget(
-                              imageUrl: genre.imageBackground,
+                            child: GestureDetector(
+                              onTap: () {
+                                AppNavigator.pushWithData(
+                                  context,
+                                  GenresCategoryPage.route,
+                                  {
+                                    "title": genre.name,
+                                    "games": genre.games,
+                                  },
+                                );
+                              },
+                              child: Stack(
+                                children: [
+                                  CacheImageWidget(
+                                    imageUrl: genre.imageBackground,
+                                    imgheight: double.infinity,
+                                    color: Colors.black54,
+                                    colorBlendMode: BlendMode.dstATop,
+                                  ),
+                                  Positioned(
+                                    bottom: 10.0,
+                                    left: 10.0,
+                                    child: Text(
+                                      genre.name,
+                                      style: AppResponsive.responsiveTextStyle(
+                                        context,
+                                        fsize: AppResponsive.kmaxExtraLargeFont(
+                                                context) +
+                                            7,
+                                        fweight: FontWeight.bold,
+                                        letterSpacing: 1,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         );

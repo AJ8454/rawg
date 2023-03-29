@@ -7,6 +7,8 @@ class CacheImageWidget extends StatelessWidget {
   final double? imgwidth;
   final BoxFit? cFit;
   final bool fromAsset;
+  final Color? color;
+  final BlendMode? colorBlendMode;
   const CacheImageWidget({
     Key? key,
     this.imageUrl,
@@ -14,6 +16,8 @@ class CacheImageWidget extends StatelessWidget {
     this.imgwidth,
     this.cFit,
     this.fromAsset = false,
+    this.color,
+    this.colorBlendMode,
   }) : super(key: key);
 
   @override
@@ -35,7 +39,8 @@ class CacheImageWidget extends StatelessWidget {
             cache: true,
             clearMemoryCacheWhenDispose: true,
             retries: 5,
-
+            color: color,
+            colorBlendMode: colorBlendMode,
             //cancelToken: cancellationToken,
           );
   }

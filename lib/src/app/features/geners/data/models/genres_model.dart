@@ -1,4 +1,4 @@
-import 'package:rawg/src/app/features/home/domain/entities/genres_entities.dart';
+import 'package:rawg/src/app/features/geners/domain/entities/genres_entities.dart';
 import 'dart:convert';
 
 GenresModel genresModelFromJson(String str) =>

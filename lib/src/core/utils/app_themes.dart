@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rawg/src/core/responsive/app_responsive.dart';
 import 'package:rawg/src/core/utils/app_colors.dart';
+import 'package:rawg/src/core/utils/app_strings.dart';
 
 class AppTheme {
   static ThemeData get lightTheme {
@@ -119,12 +120,14 @@ class AppTheme {
       appBarTheme: const AppBarTheme(
         elevation: 2,
         iconTheme: IconThemeData(color: AppColor.white),
-        backgroundColor: AppColor.redDark,
+        backgroundColor: Colors.transparent,
         titleTextStyle: TextStyle(
-            color: AppColor.white,
-            fontSize: 16,
-            fontFamily: 'rubiesque',
-            fontWeight: FontWeight.w600),
+          fontSize: 25,
+          fontWeight: FontWeight.bold,
+          color: AppColor.redDark,
+          letterSpacing: 2,
+          fontFamily: AppStrings.rexotickFont,
+        ),
         // systemOverlayStyle: SystemUiOverlayStyle(
         //   systemNavigationBarColor: AppColor.redDark,
         //   statusBarColor: AppColor.redDark,

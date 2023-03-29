@@ -4,7 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:rawg/src/app/features/authentication/presentation/pages/forget_password_page.dart';
 import 'package:rawg/src/app/features/authentication/presentation/pages/login_page.dart';
 import 'package:rawg/src/app/features/authentication/presentation/pages/signup_page.dart';
+import 'package:rawg/src/app/features/geners/presentation/pages/genres_category_page.dart';
+import 'package:rawg/src/app/features/geners/presentation/pages/genres_page.dart';
 import 'package:rawg/src/app/features/home/presentation/pages/home_page.dart';
+import 'package:rawg/src/app/features/home/presentation/widgets/bottom_nav_widget.dart';
 import 'package:rawg/src/app/features/splash/presentation/pages/splash_page.dart';
 
 class AppRoute {
@@ -25,8 +28,19 @@ class AppRoute {
       case SignUpPage.route:
         return MaterialPageRoute(builder: (context) => const SignUpPage());
 
+      case BottomNavWidget.route:
+        return MaterialPageRoute(builder: (context) => const BottomNavWidget());
+
       case HomePage.route:
         return MaterialPageRoute(builder: (context) => const HomePage());
+
+      case GenersPage.route:
+        return MaterialPageRoute(
+            builder: (context) => GenersPage(genersList: arguments));
+
+      case GenresCategoryPage.route:
+        return MaterialPageRoute(
+            builder: (context) => GenresCategoryPage(data: arguments));
     }
     return null;
   }

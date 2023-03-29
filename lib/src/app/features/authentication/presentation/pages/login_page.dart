@@ -4,7 +4,7 @@ import 'package:rawg/src/app/features/authentication/presentation/pages/signup_p
 import 'package:rawg/src/app/features/global/custom_rounded_button.dart';
 import 'package:rawg/src/app/features/global/custom_text_form_field_widget.dart';
 import 'package:rawg/src/app/features/global/snackbar_message.dart';
-import 'package:rawg/src/app/features/home/presentation/pages/home_page.dart';
+import 'package:rawg/src/app/features/home/presentation/widgets/bottom_nav_widget.dart';
 import 'package:rawg/src/core/responsive/app_responsive.dart';
 import 'package:rawg/src/core/routes/app_navigator.dart';
 import 'package:rawg/src/core/utils/app_colors.dart';
@@ -35,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
                 .showErrorSnackBar(message: state.error, context: context);
           }
           if (state is AuthLoggedInState) {
-            AppNavigator.pushReplace(context, HomePage.route);
+            AppNavigator.pushReplace(context, BottomNavWidget.route);
           }
         },
         builder: (context, state) {

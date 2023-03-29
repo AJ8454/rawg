@@ -1,5 +1,5 @@
 import 'package:rawg/src/app/features/authentication/presentation/pages/login_page.dart';
-import 'package:rawg/src/app/features/home/presentation/pages/home_page.dart';
+import 'package:rawg/src/app/features/home/presentation/widgets/bottom_nav_widget.dart';
 
 import 'package:rawg/src/app/features/splash/presentation/bloc/splash_bloc.dart';
 import 'package:rawg/src/core/responsive/app_responsive.dart';
@@ -34,7 +34,7 @@ class _SplashPageState extends State<SplashPage> {
         listener: (context, state) async {
           if (state is LoadedSplashState) {
             if (state.isLog) {
-              AppNavigator.pushReplace(context, HomePage.route);
+              AppNavigator.pushReplace(context, BottomNavWidget.route);
             } else {
               AppNavigator.pushReplace(context, LoginPage.route);
             }
