@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rawg/src/app/features/geners/presentation/widgets/genres_slider_widget.dart';
+import 'package:rawg/src/app/features/trending/presentation/widgets/trending_games_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -11,6 +12,7 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: const [
           GenresSliderWidget(),
+          TrendingGamesWidget(),
         ],
       ),
     );

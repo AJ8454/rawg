@@ -30,7 +30,7 @@ class GenresSliderWidget extends StatelessWidget {
           );
         } else if (state is GenresLoadedState) {
           return SizedBox(
-            height: AppResponsive.height(context) * 0.45,
+            height: AppResponsive.height(context) * 0.42,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
