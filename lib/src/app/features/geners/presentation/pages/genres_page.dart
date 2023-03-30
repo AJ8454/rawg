@@ -28,14 +28,8 @@ class GenersPage extends StatelessWidget {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              AppNavigator.pushWithData(
-                context,
-                GenresCategoryPage.route,
-                {
-                  "title": genersList[index].name,
-                  "games": genersList[index].games,
-                },
-              );
+              AppNavigator.pushWithData(context, GenresCategoryPage.route,
+                  {"data": genersList[index]});
             },
             child: Stack(
               alignment: AlignmentDirectional.center,
